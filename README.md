@@ -36,7 +36,7 @@ The **average time complexity** of the Quicksort algorithm with a **non-random p
    At each level of recursion, the algorithm makes \(O(n)\) comparisons. Since the recursion depth is \(O(\log n)\), the total time complexity for the average case is:
 
    \[
-   T(n) = O(n \log n)
+   T(n) = O(n log n)
    \]
 
 ### Worst Case Complexity
@@ -52,7 +52,7 @@ T(n) = O(n^2)
 In the **best case**, the pivot perfectly splits the array into two equal halves at each level of recursion. This results in a balanced recursion tree with \(O(\log n)\) levels, and each level requires \(O(n)\) work for partitioning. Therefore, the best-case time complexity is:
 
 \[
-T(n) = O(n \log n)
+T(n) = O(n log n)
 \]
 
 ## Further Considerations
