@@ -33,7 +33,7 @@ The **average time complexity** of the Quicksort algorithm with a **non-random p
    In the **average case**, the pivot splits the array into two roughly equal halves. On average, the partitioning divides the array such that approximately half the elements are on either side of the pivot. This creates a recursion tree with depth \(O(\log n)\).
 
 3. **Total Work**:
-   At each level of recursion, the algorithm makes \(O(n)\) comparisons. Since the recursion depth is \(O(\log n)\), the total time complexity for the average case is:
+   At each level of recursion, the algorithm makes \(O(n)\) comparisons. Since the recursion depth is \(O(log n)\), the total time complexity for the average case is:
 
    \[
    T(n) = O(n log n)
@@ -57,8 +57,8 @@ T(n) = O(n log n)
 
 ## Further Considerations
 
-- **Space Complexity**: The iterative version of Quicksort implemented here has a space complexity of \(O(\log n)\) due to the stack used to keep track of the subarray boundaries.
-- **Improvements**: In real-world applications, randomizing the pivot selection (instead of using the last element) can help mitigate the worst-case performance and ensure that the algorithm runs in \(O(n \log n)\) time for most inputs.
+- **Space Complexity**: The iterative version of Quicksort implemented here has a space complexity of \(O(log n)\) due to the stack used to keep track of the subarray boundaries.
+- **Improvements**: In real-world applications, randomizing the pivot selection (instead of using the last element) can help mitigate the worst-case performance and ensure that the algorithm runs in \(O(n log n)\) time for most inputs.
 
 
 
