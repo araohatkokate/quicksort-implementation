@@ -1,19 +1,15 @@
-import time
-import matplotlib.pyplot as plt
+def quicksort_non_random(arr):
+    if len(arr) <= 1:
+        return arr
+    else:
+        pivot = arr[-1]
+        left = [x for x in arr[:-1] if x <= pivot]
+        right = [x for x in arr[:-1] if x > pivot]
+        return quicksort_non_random(left) + [pivot] + quicksort_non_random(right)
 
-# Non-random pivot quicksort (last element as pivot)
-def quicksort_non_random(arr, low, high):
-    if low < high:
-        pi = partition_non_random(arr, low, high)
-        quicksort_non_random(arr, low, pi - 1)
-        quicksort_non_random(arr, pi + 1, high)
+# Test
+'''if __name__ == "__main__":
+    arr = [3, 6, 8, 10, 1, 2, 1]
+    print("Original array:", arr)
+    print("Sorted array with non-random pivot:", quicksort_non_random(arr))'''
 
-def partition_non_random(arr, low, high):
-    pivot = arr[high]
-    i = low - 1
-    for j in range(low, high):
-        if arr[j] <= pivot:
-            i += 1
-            arr[i], arr[j] = arr[j], arr[i]
-    arr[i + 1], arr[high] = arr[high], arr[i + 1]
-    return i + 1

@@ -1,14 +1,17 @@
 import random
 
-from non_random_pivot import partition_non_random
+def quicksort_random(arr):
+    if len(arr) <= 1:
+        return arr
+    else:
+        pivot = random.choice(arr)
+        left = [x for x in arr if x < pivot]
+        right = [x for x in arr if x > pivot]
+        equal = [x for x in arr if x == pivot]
+        return quicksort_random(left) + equal + quicksort_random(right)
 
-def quicksort_random(arr, low, high):
-    if low < high:
-        pi = partition_random(arr, low, high)
-        quicksort_random(arr, low, pi - 1)
-        quicksort_random(arr, pi + 1, high)
-
-def partition_random(arr, low, high):
-    rand_pivot = random.randint(low, high)
-    arr[rand_pivot], arr[high] = arr[high], arr[rand_pivot]
-    return partition_non_random(arr, low, high)
+# Test
+'''if __name__ == "__main__":
+    arr = [3, 6, 8, 10, 1, 2, 1]
+    print("Original array:", arr)
+    print("Sorted array with random pivot:", quicksort_random(arr))'''
