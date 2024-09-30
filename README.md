@@ -11,9 +11,9 @@ The benchmark runs multiple input sizes and measures the time taken to sort the 
 
 To run the benchmark and generate the results:
 
-1. Clone this repository and navigate to the directory:
+1. Clone this repository and navigate to the appropriate directory.
   
-2. Run the benchmark script:
+2. Run the benchmark script.
 
 3. After the script runs, you will see the timing results printed in the terminal, and a PNG file named `quicksort_benchmark_fixed_pivot.png` will be saved in the current directory.
 
@@ -30,7 +30,7 @@ The **average time complexity** of the Quicksort algorithm with a **non-random p
    Each time Quicksort runs, it selects a pivot and divides the array into two parts: elements less than or equal to the pivot, and elements greater than the pivot. This process requires \(O(n)\) comparisons because each element is compared to the pivot once.
 
 2. **Recursive Depth**:
-   In the **average case**, the pivot splits the array into two roughly equal halves. On average, the partitioning divides the array such that approximately half the elements are on either side of the pivot. This creates a recursion tree with depth \(O(\log n)\).
+   In the **average case**, the pivot splits the array into two roughly equal halves. On average, the partitioning divides the array such that approximately half the elements are on either side of the pivot. This creates a recursion tree with depth \(O(log n)\).
 
 3. **Total Work**:
    At each level of recursion, the algorithm makes \(O(n)\) comparisons. Since the recursion depth is \(O(log n)\), the total time complexity for the average case is:
